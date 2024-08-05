@@ -14,12 +14,13 @@ ul, ol{
 .nav li a{
     background-color: black;
     color: white;
+    font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
     padding: 10px 25px;
     display: block;
 }
 .nav li a:hover{
-    background-color: #434343;
+    background-color: #e20b0b;
 }
 .nav > li{
     float: left;
