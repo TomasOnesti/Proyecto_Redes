@@ -2,10 +2,10 @@
     margin: 0%;
     padding: 0%;
 }
-
+/*Menu desplegable*/
 .header{
     margin: auto;
-    width: 600px;
+    width: 700px;
     font-family: Arial, Helvetica, sans-serif;
 }
 ul, ol{
@@ -41,25 +41,62 @@ ul, ol{
     top: 0px;
 }
 
+/*Fondos*/
 
-/*.fondo_inicial{
-    background-image: url();
+.fondo_inicial{
+   background-color: grey;
 }
 
-.Segundo_fondo{
-    background-image: url();
-}*/
+#primer_fondo{
+    background-image: url(../Img/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#Segundo_fondo{
+    background-image: url(../Img/1_vIKR4AtyQxcIDVYOd6IdsQ.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#tercer_fondo{
+    background-image: url(../Img/Arte-oficial-de-Terraria.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#cuarto_fondo{
+    background-image: url(../Img/demons-souls-remake-2140713.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*Letras*/
 .Principal{
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
     display: flex;
     justify-content: center;
 }
 .titulo{
-    font-size: 1.75rem;
+    font-size: 3rem;
     display: flex;
     justify-content: center;
+  
 }
+.paginas_titulo{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    margin-top: 10px;
+}
+#Parrafo{
+    margin-top: 10px;
+    font-size: 2.5rem;
+}
+/*Especificos*/
 header{
     background-color: black;
 }
@@ -74,4 +111,11 @@ header{
 .tamanio{
     width: 5rem;
 }
-
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+.LOGO{
+    margin-top: 30px; 
+  width: 30rem;  
+}
