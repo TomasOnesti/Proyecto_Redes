@@ -60,7 +60,7 @@ ul, ol{
     background-size: cover;
 }
 #tercer_fondo{
-    background-image: url(../Img/Arte-oficial-de-Terraria.jpg);
+    background-image: url(../Img/TierraAria.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -78,6 +78,7 @@ ul, ol{
     color: white;
     display: flex;
     justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
 }
 .titulo{
     font-size: 3rem;
@@ -118,4 +119,12 @@ header{
 .LOGO{
     margin-top: 30px; 
   width: 30rem;  
+}
+.Logo{
+    width: 2rem;
+    background: rgba(255,255 ,255 ,255 );
+}
+.fondo{
+    background: rgba(0, 0, 0,0.2);
+    border-radius: 5px;
 }
