@@ -48,25 +48,25 @@ ul, ol{
 }
 
 #primer_fondo{
-    background-image: url(../Img/maxresdefault.jpg);
+    background-image: url(../Img/Fondos/maxresdefault.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 #Segundo_fondo{
-    background-image: url(../Img/1_vIKR4AtyQxcIDVYOd6IdsQ.png);
+    background-image: url(../Img/Fondos/bosque_verde.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 #tercer_fondo{
-    background-image: url(../Img/TierraAria.jpg);
+    background-image: url(../Img/Fondos/TierraAria.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 #cuarto_fondo{
-    background-image: url(../Img/demons-souls-remake-2140713.webp);
+    background-image: url(../Img/Fondos/DS1_Fondo.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

@@ -1,0 +1,24 @@
+
+.fondito{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 485px;
+    border-radius: 4px;
+}
+
+.fondo_ref{
+    background-image: url(../Img/Fondos/Refugio_de_los_no_muertos.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.refugio{
+    display: flex;
+    justify-content: center;
+}
+
+.img{
+    width: 30rem;
+    height: 30rem;
+}
