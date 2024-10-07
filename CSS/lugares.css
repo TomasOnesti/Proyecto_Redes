@@ -1,9 +1,42 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+@font-face {
+    font-family: dark;
+    src: url(../Fuentes/optimusprinceps/OptimusPrinceps.ttf);
+}
+
+.borde{
+    border: solid 3px rgba(239, 184, 16, 0.753);
+}
+
+
+.posicion_img{
+    padding: 0px;
+    width: 480px;
+}
+
+.posicion_text{
+    width: 600px;
+    margin-left: 550px;
+    padding: 20px;
+}
 
 .fondito{
     background-color: rgba(0, 0, 0, 0.2);
-    padding: 30px;
-    width: 485px;
     border-radius: 4px;
+}
+
+.descripcion{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.52);
+    font-family: dark;
+}
+
+.posicion{
+    float: left; 
 }
 
 .fondo_ref{
@@ -16,6 +49,8 @@
 .refugio{
     display: flex;
     justify-content: center;
+    font-size: 40px;
+    font-family: dark;
 }
 
 .img{

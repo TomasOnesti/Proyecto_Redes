@@ -30,19 +30,24 @@ $conexionDatos = new mysqli('localhost', 'phpmyadmin', 'RedesInformaticas', 'ton
         $Result_img = $conexionDatos->query($img);
         if($Result_img->num_rows > 0){
             while($Filas = $Result_img->fetch_array()){
-                echo "<div class=\"fondito\">
-                            <img class=\"img\" src=\"../Img/" . $Filas["img"] . "\">
+                echo "<div class=\"fondito posicion posicion_img borde\">
+                            <img class=\"img \" src=\"../Img/" . $Filas["img"] . "\">
                       </div>";
             }
         }
 
-        $Result_Descripcion = $conexionDatos->query($img);
+        $Result_Descripcion = $conexionDatos->query($descripcion);
         if($Result_Descripcion->num_rows > 0){
             while($Filas = $Result_Descripcion->fetch_array()){
-                
+                echo "<div class=\"fondito posicion_text borde\" >
+                <h2 class=\"descripcion \">Descripcion:</h2>
+                <p class=\"descripcion\">".$Filas[0]."</p></div>";
             }
         }
+
     ?>
+
+        <h2 class="descripcion">Objetos</h2>
 </main>
 
 <footer>

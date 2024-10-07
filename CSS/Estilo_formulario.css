@@ -1,0 +1,68 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.Registro{
+    width: 400px;
+    background-color: rgba(5, 5, 5, 0.5);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    box-shadow: 7px 13px 37px #255;
+}
+
+.Registro h4{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.Registro p{
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.Registro a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.Registro .boton{
+    width: 100%;
+    background: rgb(127, 175, 230);
+    border:none;
+    padding: 12px;
+    color: rgb(235, 222, 222);
+    margin:15px 0;
+    font-size: 15px;
+}
+
+.control{
+    width: 100%;
+    background: rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid rgb(32, 32, 32);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+#fondo{
+    background-image: url(../Img/Fondos/anorlondo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(199, 184, 184);
+    display: flex;
+    justify-content: center;
+}

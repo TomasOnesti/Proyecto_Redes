@@ -73,13 +73,24 @@ ul, ol{
 }
 
 /*Letras*/
+
+@font-face {
+    font-family: dark;
+    src: url(../Fuentes/optimusprinceps/OptimusPrinceps.ttf);
+}
+
 .Principal{
     font-size: 4rem;
     color: white;
     display: flex;
     justify-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-family: dark; 
 }
+
+.DS{
+    font-family: dark;
+}
+
 .titulo{
     font-size: 3rem;
     display: flex;
