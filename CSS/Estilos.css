@@ -19,6 +19,16 @@ ul, ol{
     padding: 10px 25px;
     display: block;
 }
+
+.nav li button{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: block;
+}
+
 .nav li a:hover{
     background-color: #e20b0b;
 }
@@ -138,4 +148,90 @@ header{
 .fondo{
     background: rgba(0, 0, 0,0.2);
     border-radius: 5px;
+}
+
+/*Inicio*/
+.datos{
+    margin-bottom: 200px;
+}
+.imagen_de_muestra{
+    width: 30rem;
+    float: right;
+    border: rgba(0, 0, 0, 0.5) solid 5px;
+}
+
+.iguales{
+    margin-left: 10px;
+    border: rgba(0, 0, 0, 0.8) solid 3px;
+    width: 300px;
+    background-image: url(../Img/Fondos/fondito.png);
+}
+
+.titulos{
+    font-size: 18px;
+    color: aliceblue;
+    border: rgba(0, 0, 0, 0.8) solid 3px;
+}
+.hd{
+    color: aliceblue;
+    font-family: dark;
+    display: flex;
+    justify-content: center;
+}
+.parrafito{
+    font-size: 14px;
+    color: aliceblue;
+}
+
+.tamanio{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    border: rgba(0, 0, 0, 0.8) solid 3px;
+    width: 297px;   
+}
+
+.TITULO{
+    margin-top: 30px;
+    width: 20rem;
+}
+
+.modificador{
+    margin: 5px;
+    width: 1000px;
+    margin-left: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.texto{
+    margin: 8px;
+    color: aliceblue;
+    font-size:20px ;
+}
+
+.sub_titulo{
+    font-size: 25px;
+    color: aliceblue;
+    font-family: dark;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.requisitos{
+    margin-left: 50px;
+}
+
+.letras{
+    color: aliceblue;
+    font-size:20px ;
+    list-style: none;
+}
+
+
+#refugio_2{
+    display: none;
+}
+
+#inicio{
+    display: block;
 }

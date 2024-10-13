@@ -12,13 +12,19 @@
     </header>
     <main>
         <article>
+            <form action="" method="post">
+            <?php
+            include ("conexion.php");
+            include ("controlar_login.php");
+            ?>
             <div class="Registro">
                 <h4>Inicio De Sesion</h4>
                 <input class="control" type="email" name="Correo" id="correos" placeholder="Ingrese su Correo Electronico">
-                <input class="control" type="password" name="Contraseña" id="contraseñas" placeholder="Ingrese su Contraseña">
-                <input class="boton" type="submit" value="Iniciar Sesion">
+                <input class="control" type="password" name="clave" id="claves" placeholder="Ingrese su Contraseña">
+                <input class="boton" type="submit" value="Iniciar Sesion" name="ingresar">
                 <p><a href="./registro.php">¿No tiene cuenta?</a></p>
             </div>
+            </form>
         </article>
     </main>
 </body>

@@ -39,12 +39,7 @@
     float: left; 
 }
 
-.fondo_ref{
-    background-image: url(../Img/Fondos/Refugio_de_los_no_muertos.webp);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
+
 
 .refugio{
     display: flex;

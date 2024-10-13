@@ -19,7 +19,7 @@
     <article>
         <div class="header">
             <ul class="nav">
-             <li>
+             <!-- <li>
                  <a href="">Jugador</a>
                  <ul>
                      <li><a href="">Arma</a></li>
@@ -33,7 +33,8 @@
                    <li><a href="">Enemigos</a></li>
                    <li><a href="">Jefes</a></li>  
                  </ul>
-             </li>
+             </li> -->
+
              <li>
                 <a href="">Lugares</a>
                 <ul>
@@ -43,7 +44,7 @@
                     <li><a href="">Palacio blanco</a></li>
                 </ul>
              </li>
-             <li>
+             <!-- <li>
                  <a href="">Persoanjes</a>
                  <ul>
                      <li><a href=""></a></li>
@@ -59,7 +60,7 @@
                     <li><a href=""></a></li>
 
                 </ul>
-             </li>
+             </li> -->
             </ul>
          </div>    
     </article>
