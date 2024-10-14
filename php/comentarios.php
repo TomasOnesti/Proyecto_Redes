@@ -43,47 +43,43 @@
         </article>
 
         <article class="separacion">
+            <div id="comentarios">
             <div class="contenedor">
                 <h2 class="user">User Name</h2>
                 <div class="contenedor_2">
-                    <p class="text fondito">
-                        hola, buen intento
-                    </p>
+                    <input class="text fondito" type="text" name="comentario" placeholder="Escriba un comentario">
                 </div>
                 <p class="fecha">fecha</p>
-            </div>
-
-            <div class="contenedor">
-                <h2 class="user">User Name</h2>
-                <div class="contenedor_2">
-                    <p class="text fondito">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti hic deserunt quod ad. Quibusdam molestiae at magnam cumque fuga ullam praesentium eos, aliquam architecto, magni quidem impedit maiores esse!
-                    </p>
-                </div>
-                <p class="fecha">fecha</p>
-            </div>
-
-            <div class="contenedor">
-                <h2 class="user">User Name</h2>
-                <div class="contenedor_2">
-                    <p class="text fondito">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam totam tempnam
-                    </p>
-                </div>
-                <p class="fecha">fecha</p>
-            </div>
-
-            <div class="contenedor">
-                <h2 class="user">User Name</h2>
-                <div class="contenedor_2">
-                    <p class="text fondito">
-                        F
-                    </p>
-                </div>
-                <p class="fecha">fecha</p>
+                <button class="comentar_2">Comentar</button>
+            </div> 
             </div>
         </article>
-        <button class="comentar">Comentar</button>
+
+        <button id="comenta" class="comentar">Comentar</button>
+
+        <script>
+            // function texto(){
+            //     var element = document.createElement("div");
+            //     var element_2 = document.createElement("input");
+
+            //     element_2.setAttribute("name", "comentario");
+            //     element_2.setAttribute("type", "text");
+            //     element.classList.add("contenedor_2");
+            //     element_2.classList.add("text");
+            //     element_2.classList.add("fondito");
+
+            //     element.appendChild(element_2);
+            // }
+            function mostrar(){
+        document.getElementById('comentarios').style.display = 'block';
+    }
+            document.getElementById("comenta").onclick = function(){
+                // texto();
+                mostrar();
+            }
+        </script>
+
+
     </main>
 </body>
 </html>

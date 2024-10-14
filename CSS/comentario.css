@@ -98,3 +98,14 @@ ul, ol{
     background-color: rgba(0, 0, 0, 0.625);
     color: white;
 }
+
+#comentarios{
+    display: none;
+}
+
+.comentar_2{
+    font-size: 14px;
+    font-family: dark;
+    background-color: rgba(0, 0, 0, 0.625);
+    color: white;
+}
