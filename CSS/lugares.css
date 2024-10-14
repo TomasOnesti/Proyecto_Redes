@@ -25,7 +25,7 @@
 }
 
 .fondito{
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 250, 255, 0.2);
     border-radius: 4px;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .sub_titulo_dos{
-    font-size: 20px;
+    font-size: 36px;
     color: rgba(255, 255, 255, 0.52);
     font-family: dark;
     margin-left: 130px;
@@ -87,7 +87,7 @@
 }
 
 .distancia{
-    margin-top: 400px;
+    margin-top: 300px;
 }
 
 .distancia_img{
@@ -95,4 +95,30 @@
     position: relative;
     bottom:  400px;
     right: 100px;
+}
+
+.lugar{
+    display: flex;
+    justify-content: center;
+}
+
+.descripcion_2{
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.52);
+    font-family: dark;
+}
+
+.posicion_obj{
+    padding: 0%;
+    width: 350px;
+}
+
+.descripcion_2_punto{
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.52);
+    font-family: dark;
+}
+
+.distancia_2{
+    margin-top: 100px;
 }

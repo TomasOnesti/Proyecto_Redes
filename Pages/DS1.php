@@ -307,7 +307,29 @@
             }
         }
         ?>
+        <p class="sub_titulo_dos distancia_2">Objetos Varios</p>
+        <?php
         
+        $obj_varios="SELECT  `Nombre`, `Efecto`, objetos.Descripcion, ubicaciones.Titulo FROM `objetos` JOIN ubicaciones ON objetos.ubicacion = ubicaciones.Id WHERE objetos.ubicacion=1 ";
+        $Result_obj=$conexionDatos->query($obj_varios);
+        if($Result_obj->num_rows > 0){
+            while($Filas=$Result_obj->fetch_array()){
+                echo "
+        <div class=\"fondito posicion borde posicion_obj\">
+            <div class=\"lugar\">
+                <p class=\"descripcion_2 \">".$Filas["Nombre"]."</p>
+            </div>
+            <div class=\"disposicion\">
+                <p class=\"descripcion_2_punto fondito borde\">".$Filas["Efecto"]."</p>
+                <p class=\"descripcion_2_punto fondito borde\">".$Filas["Titulo"]."</p>
+            </div>
+            <div>
+                <p class=\"descripcion_2 borde\">".$Filas["Descripcion"]."</p>
+            </div>
+        </div>";
+            }
+        }        
+        ?>
     </article>
 
 
