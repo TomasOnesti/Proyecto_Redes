@@ -19,7 +19,7 @@
         <article>
             <div class="header">
                 <ul class="nav">
-                 <li>
+                 <!-- <li>
                      <a class="DS" href="">Jugador</a>
                      <ul>
                          <li><a class="DS"href="">Arma</a></li>
@@ -30,26 +30,26 @@
                          <li><a class="DS"href="">Maldiciones</a></li>
                          <li><a class="DS"href="">Clases</a></li> 
                      </ul>
-                 </li>
+                 </li> -->
+
                  <li>
                     <a class="DS"href="">Mundo</a>
                     <ul>
-                        <li><a class="DS"href="">Muro de Lotrick</a></li>
-                        <li><a class="DS"href="">Catacumbas de Carthus</a></li>
+                        <li><a class="DS"href="">Santuario de enlace de la primera llama</a></li>
+                        <li><a class="DS"href="">Capital Profunda</a></li>
                         <li><a class="DS"href="">Anorlondo</a></li>
                         <li><a class="DS"href="">Castillo de Lotrick</a></li>
-                        <li><a class="DS"href="">Mazmorra de Irithyl</a></li>
-                        <li><a class="DS"href="">Torreon de Farron</a></li>
+                        <li><a class="DS"href="">Horno de la primera llama</a></li>
                     </ul>
                  </li>
-                 <li>
+                 <!-- <li>
                      <a class="DS"href="">Enemigos</a>
                      <ul>
                        <li><a class="DS"href="">Enemigos</a></li>
                        <li><a class="DS"href="">Jefes</a></li>  
                      </ul>
-                 </li>
-                 <li>
+                 </li> -->
+                 <!-- <li>
                      <a class="DS"href="">Persoanjes</a>
                      <ul>
                          <li><a class="DS"href=""></a></li>
@@ -75,7 +75,7 @@
                         <li><a class="DS"href=""></a></li>
                         <li><a class="DS"href=""></a></li>
                     </ul>
-                 </li>
+                 </li> -->
                 </ul>
              </div>    
         </article>

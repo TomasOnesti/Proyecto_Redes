@@ -37,6 +37,7 @@
 
 .posicion{
     float: left; 
+    margin-left: 50px;
 }
 
 
@@ -45,10 +46,53 @@
     display: flex;
     justify-content: center;
     font-size: 40px;
+    margin-top: 50px;
     font-family: dark;
 }
 
 .img{
     width: 30rem;
     height: 30rem;
+}
+
+.margen{
+    margin-top: 300px;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.52);
+    font-family: dark;
+    margin-left: 50px;
+}
+
+.sub_titulo_dos{
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.52);
+    font-family: dark;
+    margin-left: 130px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.img_objetos{
+    width: 20rem;
+}
+
+.posicion_img_dos{
+    padding: 0px;
+    width: 350px;
+}
+
+.disposicion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.distancia{
+    margin-top: 400px;
+}
+
+.distancia_img{
+    margin-top: 450px;
+    position: relative;
+    bottom:  400px;
+    right: 100px;
 }

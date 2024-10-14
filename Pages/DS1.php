@@ -39,7 +39,7 @@
                  <li>
                     <a href="">Mundo</a>
                     <ul>
-                        <li><button id="Inicio">Inicio</button></li>
+                        <li><button id="primero">Inicio</button></li>
                         <li><button id="refugio">Refugio de los No Muertos</button></li>
                         <li><button id="santuario">Santuario de Enlace de Fuego</button></li>
                         <li><button id="burgo">Burgo de los No Muertos</button></li>
@@ -198,47 +198,119 @@
 
 
 <div id="refugio_2">
-    <?php
-    $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
-    $conexionDatos->set_charset("utf8")
-    ?>   
-
-
+    <article>
         <?php
-        $Titulo = "SELECT  `Titulo` FROM `ubicaciones` WHERE Id = 1";
-        $Resul_Titulo = $conexionDatos->query($Titulo);
-        if($Resul_Titulo->num_rows > 0){
-            while($Filas = $Resul_Titulo->fetch_array()){
-                echo "<h1 class=\"refugio\">".$Filas[0]."</h1>";
+            $Titulo = "SELECT  `Titulo` FROM `ubicaciones` WHERE Id = 1";
+            $Resul_Titulo = $conexionDatos->query($Titulo);
+            if($Resul_Titulo->num_rows > 0){
+                while($Filas = $Resul_Titulo->fetch_array()){
+                    echo "<h1 class=\"refugio\">".$Filas[0]."</h1>";
+                }
+            }
+            
+            $img ="SELECT img FROM ubicaciones WHERE Id = 1";
+            $descripcion="SELECT Descripcion FROM ubicaciones WHERE Id = 1";
+            $Result_img = $conexionDatos->query($img);
+            if($Result_img->num_rows > 0){
+                while($Filas = $Result_img->fetch_array()){
+                    echo "<div class=\"fondito posicion posicion_img borde\">
+                                <img class=\"img \" src=\"../Img/" . $Filas["img"] . "\">
+                            </div>";
+                }
+            }
+
+            $Result_Descripcion = $conexionDatos->query($descripcion);
+            if($Result_Descripcion->num_rows > 0){
+                while($Filas = $Result_Descripcion->fetch_array()){
+                    echo "<div class=\"fondito posicion_text borde\" >
+                    <h2 class=\"descripcion \">Descripcion:</h2>
+                    <p class=\"descripcion\">".$Filas[0]."</p></div>";
+                }
+            }
+
+        ?>
+    </article>
+
+    <article>
+        <?php
+            $accesorios= "SELECT accesorios.Nombre, accesorios.Efecto, accesorios.img, ubicaciones.Titulo FROM `accesorios` JOIN ubicaciones ON ubicaciones.Id = accesorios.ubicacion_id WHERE accesorios.ubicacion_id = 1";
+            $desc_accsesorio="SELECT `Descripcion` FROM `accesorios` WHERE accesorios.ubicacion_id = 1";
+            $Result_desc_accsesorio=$conexionDatos->query($desc_accsesorio);
+            $Result_accsesorio = $conexionDatos->query($accesorios);
+            if($Result_accsesorio->num_rows > 0){
+                while($Filas = $Result_accsesorio->fetch_array()){
+                        echo "<h2 class=\"margen\">Objetos</h2>
+                        <p class=\"sub_titulo_dos\">Accesorios</p>
+                        <div class=\"fondito posicion borde posicion_img_dos \">
+                        <div>
+                        <img class=\"img_objetos \" src=\"../Img/" . $Filas["img"] ."\">
+                    </div>
+
+                    <div class=\"borde\">
+                    <p class=\"descripcion\">".$Filas["Nombre"]."</p>
+                    <p class=\"descripcion\">".$Filas["Efecto"]."</p>
+                    <p class=\"descripcion\"> \"Se encuentra en el \" " .$Filas["Titulo"]."</p>
+                    </div>
+                </div>";
+                }
+            }
+
+            if($Result_desc_accsesorio->num_rows > 0){
+                while($Filas = $Result_desc_accsesorio->fetch_array()){
+                    echo "<div class=\"fondito posicion_text borde\">
+                <h2 class=\"descripcion\">descripcion</h2>
+                <div>
+                    <p class=\"descripcion\">".$Filas[0]."</p>
+                </div>
+            </div>";
+                }
+            }
+
+        ?>       
+    </article>
+
+    <article>
+    <p class="sub_titulo_dos distancia">Armas</p>
+        <?php
+        $armas="SELECT `Nombre`, `Daño`, `Daño_especial`, `Requisitos`, `Durabilidad`, `Tipo`, armas.img, ubicaciones.Titulo, armas.Descripcion FROM `armas` JOIN ubicaciones ON armas.ubicacion_id = ubicaciones.Id WHERE armas.ubicacion_id=1 ";
+        $Result_arma=$conexionDatos->query($armas);
+        if($Result_arma->num_rows > 0){
+            while($Filas=$Result_arma->fetch_array()){
+                echo"
+        <div class=\"fondito posicion borde posicion_img_dos\">
+            <div>
+                <img class=\"img_objetos \" src=\"../Img/armas/" . $Filas["img"] ."\">
+            </div>
+
+            <div class=\"borde\">
+                <p class=\"descripcion\">".$Filas["Nombre"]."</p>
+                <div class=\"disposicion\">
+                    <p class=\"descripcion\">".$Filas["Daño"]."</p>
+                    <p class=\"descripcion\">".$Filas["Durabilidad"]."</p>
+                </div>
+                <p class=\"descripcion\">".$Filas["Daño_especial"]."</p>
+                <p class=\"descripcion\">".$Filas["Requisitos"]."</p>
+                <p class=\"descripcion\">".$Filas["Tipo"]."</p>
+                <p class=\"descripcion\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
+            </div>
+        </div>
+        
+        <div class=\"fondito posicion_text borde distancia_img\">
+            <h2 class=\"descripcion\">Descripcion</h2>
+            <div>
+                <p class=\"descripcion\">".$Filas["Descripcion"]."</p>
+            </div>
+        </div>
+        ";
+
+
             }
         }
         ?>
+        
+    </article>
 
 
-
-    <?php
-        $img ="SELECT img FROM ubicaciones WHERE Id = 1";
-        $descripcion="SELECT Descripcion FROM ubicaciones WHERE Id = 1";
-        $Result_img = $conexionDatos->query($img);
-        if($Result_img->num_rows > 0){
-            while($Filas = $Result_img->fetch_array()){
-                echo "<div class=\"fondito posicion posicion_img borde\">
-                            <img class=\"img \" src=\"../Img/" . $Filas["img"] . "\">
-                      </div>";
-            }
-        }
-
-        $Result_Descripcion = $conexionDatos->query($descripcion);
-        if($Result_Descripcion->num_rows > 0){
-            while($Filas = $Result_Descripcion->fetch_array()){
-                echo "<div class=\"fondito posicion_text borde\" >
-                <h2 class=\"descripcion \">Descripcion:</h2>
-                <p class=\"descripcion\">".$Filas[0]."</p></div>";
-            }
-        }
-
-    ?>
-    <h2 class="descripcion">Objetos</h2>
 
 </div>
 
@@ -263,8 +335,6 @@
     }
     
 </script>
-
-
     </main>
 
     <footer>

@@ -226,7 +226,7 @@ header{
     font-size:20px ;
     list-style: none;
 }
-
+/*Botones*/
 
 #refugio_2{
     display: none;
@@ -234,4 +234,14 @@ header{
 
 #inicio{
     display: block;
+}
+
+/*Prueba*/
+.margen{
+    color: red;
+}
+
+.hola{
+    color: red;
+    font-size: 40px;
 }
