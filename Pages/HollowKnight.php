@@ -38,10 +38,11 @@
              <li>
                 <a href="">Lugares</a>
                 <ul>
-                    <li><a href="">Ciudad de las lagrimas</a></li>
-                    <li><a href="">Cuenca antigua</a></li>
-                    <li><a href="">Jardines de la reina</a></li>
-                    <li><a href="">Palacio blanco</a></li>
+                    <li><button>Ciudad de las lagrimas</button></li>
+                    <li><button>Santuario de almas</button></li>
+                    <li><button>BocaSucia</button></li>
+                    <li><button>Jardines de la reina</button></li>
+                    <li><button>Palacio blanco</button></li>
                 </ul>
              </li>
              <!-- <li>
@@ -64,6 +65,7 @@
             </ul>
          </div>    
     </article>
+
 
     <article>
         <div>

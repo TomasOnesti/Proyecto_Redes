@@ -332,7 +332,26 @@
         ?>
     </article>
 
-
+        <div>
+            <div><img src="" alt=""></div>
+            <div>
+                <p>Nombre</p>
+                <div>
+                    <p>vida</p>
+                    <p>debilidad</p>
+                    <p>resistencia</p>
+                    <p>inmunidad(si tiene)</p>
+                </div>
+                <!-- <div>
+                    <img src="" alt="">
+                    <p>objeto nombre</p>
+                    <img src="" alt="">
+                    <p>arma</p>
+                    <img src="" alt="">
+                    <p>armadura</p>
+                </div> -->
+            </div>
+        </div>
 
 </div>
 
