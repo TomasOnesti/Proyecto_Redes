@@ -122,3 +122,12 @@
 .distancia_2{
     margin-top: 100px;
 }
+
+.posicionamientos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.posicion_2{
+    margin-left: 50px;
+}

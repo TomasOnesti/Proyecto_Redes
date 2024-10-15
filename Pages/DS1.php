@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../CSS/lugares.css">
 </head>
     <?php
-    $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
-    $conexionDatos->set_charset("utf8")
+    $conexionDatos = new mysqli('localhost', 'phpmyadmin', 'RedesInformaticas', 'tonesti');
     ?>
 <body id="cuarto_fondo">
     <header>
@@ -289,7 +288,7 @@
                     <p class=\"descripcion\">".$Filas["Durabilidad"]."</p>
                 </div>
                 <p class=\"descripcion\">".$Filas["Daño_especial"]."</p>
-                <p class=\"descripcion\">".$Filas["Requisitos"]."</p>
+                <p class=\"descripcion\"> \"Requiere \" ".$Filas["Requisitos"]."</p>
                 <p class=\"descripcion\">".$Filas["Tipo"]."</p>
                 <p class=\"descripcion\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
             </div>
@@ -321,38 +320,58 @@
             </div>
             <div class=\"disposicion\">
                 <p class=\"descripcion_2_punto fondito borde\">".$Filas["Efecto"]."</p>
-                <p class=\"descripcion_2_punto fondito borde\">".$Filas["Titulo"]."</p>
+                <p class=\"descripcion_2_punto fondito borde\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
             </div>
             <div>
                 <p class=\"descripcion_2 borde\">".$Filas["Descripcion"]."</p>
             </div>
         </div>";
             }
-        }        
+        } 
         ?>
     </article>
+    <article>
+        <?php
+        // $enemigos="SELECT  enemigos.Nombre, enemigos.Descripcion, `vida`, `Debilidad`, `Resistencia`, `Inmunidad`, objetos.Nombre, armas.Nombre, ubicaciones.Titulo FROM `enemigos` JOIN objetos ON enemigos.objeto_id = objetos.Id JOIN armas ON enemigos.arma_id = armas.Id JOIN ubicaciones ON enemigos.Ubicacion_id = ubicaciones.Id JOIN ubicaciones_enemigos ON enemigos.Id = ubicaciones_enemigos.Enemigos_Ubicacion_id WHERE ubicaciones_enemigos.Ubicaciones_Id = 1";
+        // $Result_enemigos= $conexionDatos->query($enemigos);
+        // if($Result_enemigos->num_rows > 0){
+        //     while($Filas=$Result_enemigos->fetch_array()){
+        //         echo"<div class=\"fondito posicion_2 borde posicion_obj\">
+        //         <p class=\"descripcion_2 \">".$Filas["Nombre"]."</p>
+        //         <div class=\"disposicion\">
+        //             <p class=\"descripcion \">vida</p>
+        //             <p class=\"descripcion \">debilidad</p>
+        //             <p class=\"descripcion \">resistencia</p>
+        //             <p class=\"descripcion \">inmunidad(si tiene)</p>
+        //             <p class=\"descripcion \">ubicacion</p>
+        //         </div>
 
-        <div>
-            <div><img src="" alt=""></div>
-            <div>
-                <p>Nombre</p>
-                <div>
-                    <p>vida</p>
-                    <p>debilidad</p>
-                    <p>resistencia</p>
-                    <p>inmunidad(si tiene)</p>
-                </div>
-                <!-- <div>
-                    <img src="" alt="">
-                    <p>objeto nombre</p>
-                    <img src="" alt="">
-                    <p>arma</p>
-                    <img src="" alt="">
-                    <p>armadura</p>
-                </div> -->
-            </div>
-        </div>
+        //         <div>
+        //         <p class=\"descripcion \">objeto nombre</p>
+        //         <div class=\"posicionamientos\">
+        //             </div>
+        //             <div>
+        //             <p class=\"descripcion \">arma</p>
+        //             </div>
+        //             <div>
+        //                 <p class=\"descripcion \">armadura</p>
+        //             </div>
+        //             <div>
+        //                 <p class=\"descripcion \" >accesorio</p>
+        //             </div>
+        //             <div>
+        //                 <p class=\"descripcion \">hechizo</p>
+        //             </div>
+        //         </div> 
 
+        //         <p class=\"descripcion \">descripcion</p>
+        //         </div>
+        //         <div class=\"fondito borde\">
+        // </div>";
+        //     }
+        // }
+        ?>
+    </article>
 </div>
 
 
