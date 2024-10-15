@@ -8,6 +8,7 @@
 </head>
 <body>
 <?php
+
 if(!empty($_POST["registro"])) {
     if(empty($_POST["nombre"]) or empty($_POST["correo"]) or empty($_POST["clave"])) {
        echo "Uno de los campos esta vacio"; 
@@ -16,7 +17,7 @@ if(!empty($_POST["registro"])) {
         $correo = $_POST["correo"];
         $clave = $_POST["clave"];
 
-        $sql=$conexionDatos->query("insert into usuarios(Nombre_usuario, correo, contraseña)values('$nombre','$correo','$clave')");
+        $sql=$conexionDatos->query("insert into usuarios(Nombre_usuario, correo, contraseña) values('$nombre','$correo','$clave')");
         if ($sql == 1) {
             echo "Usuario registrado";
         } else {

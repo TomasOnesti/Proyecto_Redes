@@ -12,8 +12,8 @@
     </header>
     <main>
         <article>
-            <form action="" method="POST">
-        <?php
+            <form method="POST">
+            <?php
                 include ("conexion.php");
                 include ("controlar_registro.php");
                 ?>
