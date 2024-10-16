@@ -237,6 +237,10 @@ header{
     display: none;
 }
 
+#burgo_2{
+    display: none;
+}
+
 #inicio{
     display: block;
 }

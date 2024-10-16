@@ -521,6 +521,38 @@
 </div>
 
 <div id="burgo_2">
+<article>
+        <?php
+            $Titulo = "SELECT  `Titulo` FROM `ubicaciones` WHERE Id = 3";
+            $Resul_Titulo = $conexionDatos->query($Titulo);
+            if($Resul_Titulo->num_rows > 0){
+                while($Filas = $Resul_Titulo->fetch_array()){
+                    echo "<h1 class=\"refugio\">".$Filas[0]."</h1>";
+                }
+            }
+            
+            $img ="SELECT img FROM ubicaciones WHERE Id = 3";
+            $descripcion="SELECT Descripcion FROM ubicaciones WHERE Id = 3";
+            $Result_img = $conexionDatos->query($img);
+            if($Result_img->num_rows > 0){
+                while($Filas = $Result_img->fetch_array()){
+                    echo "<div class=\"fondito posicion posicion_img borde\">
+                                <img class=\"img \" src=\"../Img/lugares/" . $Filas["img"] . "\">
+                            </div>";
+                }
+            }
+
+            $Result_Descripcion = $conexionDatos->query($descripcion);
+            if($Result_Descripcion->num_rows > 0){
+                while($Filas = $Result_Descripcion->fetch_array()){
+                    echo "<div class=\"fondito posicion_text borde\" >
+                    <h2 class=\"descripcion \">Descripcion:</h2>
+                    <p class=\"descripcion\">".$Filas[0]."</p></div>";
+                }
+            }
+
+        ?>
+    </article>
 </div>
 
 <script>
@@ -537,6 +569,10 @@
     function ocultar_santuario(){
         document.getElementById('santuario_2').style.display ='none';
     }
+
+    function ocultar_burgo(){
+        document.getElementById('burgo_2').style.display ='none';
+    }
     //Mostrar
     function mostrar_refugio(){
         document.getElementById('refugio_2').style.display = 'block';
@@ -548,6 +584,10 @@
 
     function mostrar_inicio(){
         document.getElementById('inicio').style.display = 'block';
+    }
+
+    function mostrar_burgo(){
+        document.getElementById('burgo_2').style.display = 'block';
     }
     //Cambiar
     function cambiar_santuario(){
@@ -561,11 +601,16 @@
     function cambiar_inicio(){
         document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/DS1_Fondo.png)';
     }
-    
+
+    function cambiar_burgo(){
+        document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/Burgo_NM_2.webp)';
+    }
+    //Botones
     document.getElementById("refugio").onclick = function(){
         mostrar_refugio();
         ocultar_inicio();
         ocultar_santuario();
+        ocultar_burgo();
         cambiar();
     }
     
@@ -573,14 +618,24 @@
         mostrar_santuario();
         ocultar_inicio();
         cambiar_santuario();
+        ocultar_burgo();
         ocultar_refugio();
     }
 
     document.getElementById("primero").onclick = function(){
         ocultar_santuario();
         ocultar_refugio();
+        ocultar_burgo();
         mostrar_inicio();
         cambiar_inicio();
+    }
+
+    document.getElementById("burgo").onclick = function(){
+        ocultar_inicio();
+        ocultar_refugio();
+        ocultar_santuario();
+        mostrar_burgo();
+        cambiar_burgo();
     }
 </script>
     </main>
