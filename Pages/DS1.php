@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/lugares.css">
 </head>
     <?php
-    $conexionDatos = new mysqli('localhost', 'phpmyadmin', 'RedesInformaticas', 'tonesti');
+    $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
     ?>
 <body id="cuarto_fondo">
     <header>
