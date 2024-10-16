@@ -233,9 +233,14 @@ header{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+#santuario_2{
+    display: none;
+}
+
 #inicio{
     display: block;
 }
+
 
 /*Prueba*/
 .margen{

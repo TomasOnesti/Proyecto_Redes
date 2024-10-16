@@ -108,17 +108,36 @@
     font-family: dark;
 }
 
-.posicion_obj{
-    padding: 0%;
-    width: 350px;
-}
 
 .descripcion_2_punto{
     font-size: 26px;
     color: rgba(255, 255, 255, 0.52);
     font-family: dark;
+    margin: 5px;
 }
 
 .distancia_2{
     margin-top: 100px;
+}
+
+.posicionamientos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.posicion_2{
+    margin-left: 50px;
+}
+
+.distancia_3{
+    margin-top: 800px;
+}
+
+.chiquito{
+    width: 50px;
+}
+
+.position{
+    display: flex;
+    justify-content: center;
 }
