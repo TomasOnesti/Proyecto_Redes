@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/lugares.css">
 </head>
     <?php
-    $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
+    $conexionDatos = new mysqli('localhost', 'phpmyadmin', 'RedesInformaticas', 'tonesti');
     ?>
 <body id="cuarto_fondo">
     <header>
@@ -654,7 +654,7 @@
     </article>
 
     <article>
-        <p class="distancia_3 sub_titulo_dos ">Enemigos</p>
+        <p class="distancia_3 sub_titulo_dos">Enemigos</p>
         <?php
             $enemigos="SELECT enemigos.Nombre, enemigos.Descripcion,enemigos.Img, `vida`, `Debilidad`, `Resistencia`, `Inmunidad`, objetos.Nombre AS objeto, armas.Nombre AS arma, armas.img AS img_arma, ubicaciones.Titulo, armaduras.Nombre AS armadura, armaduras.img AS armadura_img FROM `enemigos` JOIN objetos ON enemigos.objeto_id = objetos.Id JOIN armas ON enemigos.arma_id = armas.Id JOIN ubicaciones ON enemigos.Ubicacion_id = ubicaciones.Id JOIN ubicaciones_enemigos ON enemigos.Id = ubicaciones_enemigos.Enemigos_Ubicacion_id JOIN armaduras ON enemigos.armadura_id = armaduras.Id WHERE ubicaciones_enemigos.Ubicaciones_Id = 3";
             $Result_enemigos= $conexionDatos->query($enemigos);
