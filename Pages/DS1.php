@@ -288,7 +288,7 @@
                     <p class=\"descripcion\">".$Filas["Durabilidad"]."</p>
                 </div>
                 <p class=\"descripcion\">".$Filas["Daño_especial"]."</p>
-                <p class=\"descripcion\">".$Filas["Requisitos"]."</p>
+                <p class=\"descripcion\">\"Requiere: \"".$Filas["Requisitos"]."</p>
                 <p class=\"descripcion\">".$Filas["Tipo"]."</p>
                 <p class=\"descripcion\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
             </div>
