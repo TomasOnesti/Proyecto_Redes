@@ -12,7 +12,9 @@
         <a href="../index.html"><img class="Logo" src="../Img/Back_Button.png" alt="Volver"></a>
         <h1 class="Principal">Guia de Hollow Knight</h1>
     </header>
-
+    <?php
+        $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
+    ?>
     <main>
         <div class="fondo">
             <h2 class="paginas_titulo">Guia de Hollow Knight: Armas, amuletos, enemigos, jefes,etc. Aqui encontraras las formas mas faciles de pasarte el juego, ademas de toda la informacion que desees. </h2> 
@@ -39,11 +41,12 @@
              <li>
                 <a href="">Lugares</a>
                 <ul>
-                    <li><button>Ciudad de las lagrimas</button></li>
-                    <li><button>Santuario de almas</button></li>
-                    <li><button>BocaSucia</button></li>
-                    <li><button>Jardines de la reina</button></li>
-                    <li><button>Palacio blanco</button></li>
+                    <li><button id="inicial">Inicio</button></li>
+                    <li><button id="lagrimas">Ciudad de las lagrimas</button></li>
+                    <li><button id="almas">Santuario de almas</button></li>
+                    <li><button id="bocasucia">BocaSucia</button></li>
+                    <li><button id="jardines">Jardines de la reina</button></li>
+                    <li><button id="palacio">Palacio blanco</button></li>
                 </ul>
              </li>
              <!-- <li>
@@ -68,7 +71,7 @@
     </article>
 
 
-    <div id="inicio">
+<div id="inicio">
     <article>
         <img class="TITULO" src="../Img/hollowknight.png" alt="titulo">
         <div class="datos">
@@ -177,6 +180,53 @@
         </div>
     </article>
 </div>
+
+<div>
+
+</div>
+<script>
+    function cambiar_lagrima(){
+        document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/City_of_Tears_Fountain_Square.png)';
+    }
+
+    function mostrar_lagrima(){
+        document.getElementById('lagrimas_2').style.display = 'block';
+    }
+    //Ocultar
+    function ocultar_lagrima(){
+        document.getElementById('lagrimas_2').style.display ='none';
+    }
+
+    function ocultar_inicio(){
+        document.getElementById('inicio').style.display ='none';
+    }
+
+    function ocultar_almas(){
+        document.getElementById('refugio_2').style.display ='none';
+    }
+
+    function ocultar_jardines(){
+        document.getElementById('santuario_2').style.display ='none';
+    }
+
+    function ocultar_bocasucia(){
+        document.getElementById('burgo_2').style.display ='none';
+    }
+
+    function ocultar_palacio(){
+        document.getElementById('anorlondo_2').style.display ='none';
+    }
+
+    document.getElementById("lagrimas").onclick = function(){
+        ocultar_inicio();
+        // ocultar_burgo();
+        // ocultar_refugio();
+        // ocultar_santuario();
+        // ocultar_horno();
+        mostrar_lagrima();
+        cambiar_lagrima();
+    }    
+</script>
     </main>
 
     <footer></footer>

@@ -139,7 +139,7 @@ header{
 }
 .LOGO{
     margin-top: 30px; 
-  width: 30rem;  
+    width: 30rem;  
 }
 .Logo{
     width: 2rem;
@@ -246,6 +246,10 @@ header{
 }
 
 #horno_2{
+    display: none;
+}
+
+#lagrimas_2{
     display: none;
 }
 

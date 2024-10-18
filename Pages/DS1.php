@@ -91,7 +91,7 @@
            
             <img class="imagen_de_muestra" src="../Img/Fondos/Fondodos_DS1.jfif" alt="DS1">
             <div class=iguales>
-            <p class="titulos">Desarrollado por FromSoftware y Distribuido por Bandai Namco</p>
+                <p class="titulos">Desarrollado por FromSoftware y Distribuido por Bandai Namco</p>
                 <h2 class="hd">Fecha de lanzamiento</h2>
 
                 <p class="parrafito tamanio">Para consolas</p>
@@ -1140,6 +1140,7 @@
         ocultar_santuario();
         ocultar_burgo();
         ocultar_anorlondo();
+        ocultar_horno();
         cambiar();
     }
     
@@ -1150,6 +1151,7 @@
         ocultar_burgo();
         ocultar_refugio();
         ocultar_anorlondo();
+        ocultar_horno();
     }
 
     document.getElementById("primero").onclick = function(){
@@ -1157,6 +1159,7 @@
         ocultar_refugio();
         ocultar_burgo();
         ocultar_anorlondo();
+        ocultar_horno();
         mostrar_inicio();
         cambiar_inicio();
     }
@@ -1166,6 +1169,7 @@
         ocultar_refugio();
         ocultar_santuario();
         ocultar_anorlondo();
+        ocultar_horno();
         mostrar_burgo();
         cambiar_burgo();
     }
@@ -1175,6 +1179,7 @@
         ocultar_burgo();
         ocultar_refugio();
         ocultar_santuario();
+        ocultar_horno();
         mostrar_anorlondo();
         cambiar_anorlondo();
     }    
