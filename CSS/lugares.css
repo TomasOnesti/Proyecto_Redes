@@ -40,7 +40,10 @@
     margin-left: 50px;
 }
 
+.posicion_al{
+    margin: 15px;
 
+}
 
 .refugio{
     display: flex;
@@ -63,6 +66,8 @@
     margin-left: 50px;
 }
 
+
+
 .sub_titulo_dos{
     font-size: 36px;
     color: rgba(255, 255, 255, 0.52);
@@ -81,6 +86,7 @@
     width: 350px;
 }
 
+
 .disposicion{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,6 +102,14 @@
     bottom:  400px;
     right: 100px;
 }
+
+.distancia_img_anorl{
+    margin-top: 270px;
+    position: relative;
+    bottom:  3400px;
+    right: 100px;
+}
+
 
 .lugar{
     display: flex;
@@ -140,4 +154,23 @@
 .position{
     display: flex;
     justify-content: center;
+}
+
+.descripcion_al{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.52);
+    font-family: dark;
+}
+
+.anorlondo{
+    margin-top: 400px;
+    font-size: 40px;
+    color: black;
+    font-family: dark;
+    margin-left: 25px;
+}
+
+.posicionar_anorlondo{
+    position: relative;
+    bottom:2000px ; 
 }
