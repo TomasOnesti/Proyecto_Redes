@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/lugares.css">
 </head>
     <?php
-    $conexionDatos = new mysqli('localhost', 'phpmyadmin', 'RedesInformaticas', 'tonesti');
+        $conexionDatos = new mysqli('localhost', 'root', '', 'tonesti');
     ?>
 <body id="cuarto_fondo">
     <header>
@@ -906,6 +906,159 @@
     </article>
 </div>
 
+<div id="horno_2">
+    <article>
+        <?php
+            $Titulo = "SELECT  `Titulo` FROM `ubicaciones` WHERE Id = 5";
+            $Resul_Titulo = $conexionDatos->query($Titulo);
+            if($Resul_Titulo->num_rows > 0){
+                while($Filas = $Resul_Titulo->fetch_array()){
+                    echo "<h1 class=\"refugio\">".$Filas[0]."</h1>";
+                }
+            }
+            
+            $img ="SELECT img FROM ubicaciones WHERE Id = 5";
+            $descripcion="SELECT Descripcion FROM ubicaciones WHERE Id = 5";
+            $Result_img = $conexionDatos->query($img);
+            if($Result_img->num_rows > 0){
+                while($Filas = $Result_img->fetch_array()){
+                    echo "<div class=\"fondito posicion posicion_img borde\">
+                                <img class=\"img \" src=\"../Img/lugares/" . $Filas["img"] . "\">
+                            </div>";
+                }
+            }
+
+            $Result_Descripcion = $conexionDatos->query($descripcion);
+            if($Result_Descripcion->num_rows > 0){
+                while($Filas = $Result_Descripcion->fetch_array()){
+                    echo "<div class=\"fondito posicion_text borde\" >
+                    <h2 class=\"descripcion \">Descripcion:</h2>
+                    <p class=\"descripcion\">".$Filas[0]."</p></div>";
+                }
+            }
+
+        ?>
+    </article>     
+
+    <article>
+        <p class="sub_titulo_dos distancia_horno">Armas</p>
+        <?php
+        $armas="SELECT `Nombre`, `Daño`, `Daño_especial`, `Requisitos`, `Durabilidad`, `Tipo`, armas.img, ubicaciones.Titulo, armas.Descripcion FROM `armas` JOIN ubicaciones ON armas.ubicacion_id = ubicaciones.Id WHERE armas.ubicacion_id=5 ";
+        $Result_arma=$conexionDatos->query($armas);
+        if($Result_arma->num_rows > 0){
+            while($Filas=$Result_arma->fetch_array()){
+                echo"
+        <div class=\"fondito posicion borde posicion_img_dos\">
+            <div>
+                <img class=\"img_objetos \" src=\"../Img/armas/" . $Filas["img"] ."\">
+            </div>
+
+            <div class=\"borde\">
+                <p class=\"descripcion\">".$Filas["Nombre"]."</p>
+                <div class=\"disposicion\">
+                    <p class=\"descripcion\">\"Daño del arma: \" ".$Filas["Daño"]."</p>
+                    <p class=\"descripcion\">\"Durabilidad del arma: \"".$Filas["Durabilidad"]."</p>
+                </div>
+                <p class=\"descripcion\">".$Filas["Daño_especial"]."</p>
+                <p class=\"descripcion\"> \"Requiere: \" ".$Filas["Requisitos"]."</p>
+                <p class=\"descripcion\">".$Filas["Tipo"]."</p>
+                <p class=\"descripcion\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
+            </div>
+        </div>
+        
+        <div class=\"fondito posicion_text borde distancia_img\">
+            <h2 class=\"descripcion\">Descripcion</h2>
+            <div>
+                <p class=\"descripcion\">".$Filas["Descripcion"]."</p>
+            </div>
+        </div>
+        ";
+            }
+        }
+        ?>
+
+        <p class="sub_titulo_dos distancia_2">Objetos Varios</p>
+        <?php
+        $obj_varios="SELECT  `Nombre`, `Efecto`, objetos.Descripcion, ubicaciones.Titulo FROM `objetos` JOIN ubicaciones ON objetos.ubicacion = ubicaciones.Id WHERE objetos.ubicacion=5 ";
+        $Result_obj=$conexionDatos->query($obj_varios);
+        if($Result_obj->num_rows > 0){
+            while($Filas=$Result_obj->fetch_array()){
+                echo "
+        <div class=\"fondito posicion borde posicion_img_dos\">
+            <div class=\"lugar\">
+                <p class=\"descripcion_2 \">".$Filas["Nombre"]."</p>
+            </div>
+            <div class=\"disposicion\">
+                <p class=\"descripcion_2_punto fondito borde\">".$Filas["Efecto"]."</p>
+                <p class=\"descripcion_2_punto fondito borde\"> \"Se encuentra en el \" ".$Filas["Titulo"]."</p>
+            </div>
+            <div>
+                <p class=\"descripcion_2 borde\">".$Filas["Descripcion"]."</p>
+            </div>
+        </div>";
+            }
+        } 
+        ?>
+    </article>
+
+    <article>
+        <p class="distancia_3 sub_titulo_dos ">Enemigos</p>
+        <?php
+            $enemigos="SELECT enemigos.Nombre, enemigos.Descripcion,enemigos.Img, `vida`, `Debilidad`, `Resistencia`, `Inmunidad`, objetos.Nombre AS objeto, armas.Nombre AS arma, armas.img AS img_arma, ubicaciones.Titulo FROM `enemigos` JOIN objetos ON enemigos.objeto_id = objetos.Id JOIN armas ON enemigos.arma_id = armas.Id JOIN ubicaciones ON enemigos.Ubicacion_id = ubicaciones.Id JOIN ubicaciones_enemigos ON enemigos.Id = ubicaciones_enemigos.Enemigos_Ubicacion_id WHERE ubicaciones_enemigos.Ubicaciones_Id = 5";
+            $Result_enemigos= $conexionDatos->query($enemigos);
+            if($Result_enemigos->num_rows > 0){
+                while($Filas=$Result_enemigos->fetch_array()){
+                    echo"
+                    <div class=\"fondito posicion_2 borde posicion_img\">
+                        <p class=\"descripcion_2 \">".$Filas["Nombre"]."</p>
+                        <div>
+                            <img class=\"img_objetos \" src=\"../Img/enemigos/".$Filas["Img"]. "\">
+                        </div>
+                        
+                        <div class=\"disposicion\">
+                            <p class=\"descripcion \">\"HP \" ".$Filas["vida"]."</p>
+                            <p class=\"descripcion \">\"Es debil ante: \" ".$Filas["Debilidad"]."</p>
+                            <p class=\"descripcion \">\"Resiste: \"".$Filas["Resistencia"]."</p>
+                            <p class=\"descripcion \">\"Es inmune a: \"".$Filas["Inmunidad"]."</p>
+                            <p class=\"descripcion \">\"Se encuentra en: \" ".$Filas["Titulo"]."</p>
+                        </div>
+
+                        <div class=\"posicionamientos borde\">
+                            <p class=\"descripcion\">Drops: </p>
+                            <div>
+                                <p class=\"descripcion \">\"El demonio del refugio suelta 1-3 de \"".$Filas["objeto"]."</p>
+                            </div>
+
+                            <div>
+                                <img class=\"chiquito\" src=\"../Img/armas/".$Filas["img_arma"]."\" >
+                                <p class=\"descripcion position\">".$Filas["arma"]."</p>
+                            </div>
+
+                            <div>
+                                <p class=\"descripcion \" ></p>
+                            </div>
+
+                            <div>
+                                <p class=\"descripcion \" ></p>
+                            </div>
+
+                            <div>
+                                <p class=\"descripcion \" ></p>
+                            </div>
+
+                            <div>
+                                <p class=\"descripcion \"></p>
+                            </div>
+
+                        </div> 
+                        <p class=\"descripcion \">".$Filas["Descripcion"]."</p>
+                    </div>";
+                }
+            }
+        ?>
+    </article>
+</div>
+
 <script>
     
     //Ocultar
@@ -928,6 +1081,10 @@
     function ocultar_anorlondo(){
         document.getElementById('anorlondo_2').style.display ='none';
     }
+
+    function ocultar_horno(){
+        document.getElementById('horno_2').style.display ='none';
+    }
     //Mostrar
     function mostrar_refugio(){
         document.getElementById('refugio_2').style.display = 'block';
@@ -948,6 +1105,10 @@
     function mostrar_anorlondo(){
         document.getElementById('anorlondo_2').style.display = 'block';
     }
+
+    function mostrar_horno(){
+        document.getElementById('horno_2').style.display ='block';
+    }
     //Cambiar
     function cambiar_santuario(){
         document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/Santuario_de_Enlace_de_Fuego.png)';
@@ -967,6 +1128,10 @@
 
     function cambiar_anorlondo(){
         document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/anorlondo.png)';
+    }
+
+    function cambiar_horno(){
+        document.getElementById('cuarto_fondo').style.backgroundImage = 'url(../Img/Fondos/Horno_de_la_Llama_original.png)';
     }
     //Botones
     document.getElementById("refugio").onclick = function(){
@@ -1013,11 +1178,21 @@
         mostrar_anorlondo();
         cambiar_anorlondo();
     }    
+
+    document.getElementById("horno_primera_llama").onclick = function(){
+        ocultar_inicio();
+        ocultar_burgo();
+        ocultar_refugio();
+        ocultar_santuario();
+        ocultar_anorlondo();
+        mostrar_horno();
+        cambiar_horno();
+    }    
 </script>
     </main>
 
-    <footer>
-
-    </footer>
+<footer>
+    <p>Creador: Tomas Onesti</p>
+</footer>
 </body>
 </html>

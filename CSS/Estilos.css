@@ -245,6 +245,10 @@ header{
     display: none;
 }
 
+#horno_2{
+    display: none;
+}
+
 #inicio{
     display: block;
 }
